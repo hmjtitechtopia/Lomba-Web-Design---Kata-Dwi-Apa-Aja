@@ -1,0 +1,538 @@
+@media (max-width: 1200px) {
+  .ornamen {
+    display: none;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  .navbar .menu {
+    gap: 2.5rem;
+  }
+
+  .container-hero .hero-wrap h1 {
+    font-size: clamp(3rem, 6vw, 4rem);
+  }
+
+  .container-peta {
+    padding-inline: 1.5rem;
+  }
+
+  .kolom-peta {
+    width: 42%;
+  }
+
+  .peta svg {
+    max-width: 62vw;
+  }
+
+  .container-ensiklopedia .wrap-1 {
+    margin-inline: 2rem;
+  }
+
+  .galeri-card {
+    grid-column: span 4;
+  }
+
+  .galeri-card--wide {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    height: 72px;
+    top: 12px;
+  }
+
+  .navbar .menu {
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .container-hero {
+    height: 100svh;
+    min-height: 680px;
+  }
+
+  .container-hero .hero-wrap {
+    width: 100%;
+    padding-left: 6vw;
+  }
+
+  .container-hero .hero-wrap h1 {
+    font-size: clamp(2.7rem, 8vw, 3.6rem);
+  }
+
+  .container-hero .hero-wrap .text-hero {
+    height: auto;
+    justify-content: flex-end;
+    max-width: 70%;
+  }
+
+  .container-hero .info-hero {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.5rem;
+    width: 38%;
+    padding-right: 1rem;
+  }
+
+  .container-hero .hero-wrap .text-hero {
+    height: auto;
+    padding-bottom: 11rem;
+  }
+
+  .container-peta {
+    height: auto;
+    min-height: 100svh;
+    margin-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  .peta-judul {
+    margin-bottom: 2rem;
+  }
+
+  .info-peta-wrap {
+    height: auto;
+    min-height: 560px;
+  }
+
+  .kolom-peta {
+    width: 45%;
+    height: auto;
+    min-height: 520px;
+    padding: 1.25rem;
+  }
+
+  .kolom-peta h2 {
+    font-size: 2rem;
+  }
+
+  .kolom-peta > p {
+    font-size: 0.78rem;
+  }
+
+  .wilayah-list {
+    gap: 0.45rem;
+  }
+
+  .wilayah-button {
+    min-height: 2.35rem;
+    font-size: 0.68rem;
+  }
+
+  .peta {
+    top: 8rem;
+    left: 1rem;
+    width: 52%;
+  }
+
+  .peta svg {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+
+  .container-ensiklopedia {
+    margin-top: 7rem;
+  }
+
+  .container-ensiklopedia .wrap-1 {
+    height: 62vh;
+    min-height: 520px;
+  }
+
+  .container-ensiklopedia .wrap-1 .display-kategori,
+  .container-ensiklopedia .wrap-1 .wrap-right {
+    height: 62vh;
+    min-height: 520px;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 5%;
+  }
+
+  .container-galeri {
+    padding-inline: 4vw;
+  }
+
+  .ornamen.barong {
+    transform-origin: center;
+    scale: 0.8;
+    left: -3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: calc(100% - 24px);
+    height: 64px;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .navbar .logo img {
+    width: 3.5rem ;
+    height: auto;
+  }
+
+  .navbar .logo h1 {
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .navbar .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 0;
+    margin: 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+
+    background: var(--color-coco);
+    border-radius: 12px;
+    z-index: 1000;
+    font-size: 0.9rem;
+  }
+
+  .navbar .menu.active {
+    display: flex;
+  }
+
+  .navbar .menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar .menu a {
+    display: block;
+    padding: 0.4rem 0;
+  }
+
+  .container-hero {
+    min-height: 720px;
+    padding: 1rem;
+  }
+
+  .container-hero .hero-wrap {
+    justify-content: center;
+    padding-top: 5rem;
+  }
+
+  .container-hero .hero-wrap .text-hero {
+    max-width: 92%;
+    height: auto;
+  }
+
+  .container-hero .hero-wrap h1 {
+    font-size: clamp(2.2rem, 12vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .container-hero .hero-wrap p {
+    font-size: 0.85rem;
+  }
+
+  .container-hero .hero-wrap .btn-explore {
+    margin-bottom: 1rem;
+  }
+
+  .info-hero {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: min(88%, 390px);
+  }
+
+  .info-hero .txt {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .info-hero h3 {
+    font-size: 1rem;
+  }
+
+  .info-hero p {
+    max-height: 6rem;
+    overflow-y: auto;
+    font-size: 0.72rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gold-twine) rgba(20, 17, 15, 0.72);
+  }
+
+  .info-hero p::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .info-hero p::-webkit-scrollbar-track {
+    background: rgba(20, 17, 15, 0.72);
+    border-radius: 999px;
+  }
+
+  .info-hero p::-webkit-scrollbar-thumb {
+    background: var(--color-gold-twine);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 999px;
+  }
+
+  .container-peta {
+    margin-top: 4rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .peta-judul {
+    order: 1;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .info-peta-wrap {
+    order: 3;
+    display: block;
+    min-height: 0;
+  }
+
+  .kolom-peta {
+    width: 100%;
+    height: auto;
+    min-height: 520px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .kolom-peta h2 {
+    font-size: 1.65rem;
+  }
+
+  .kolom-peta > p {
+    font-size: 0.78rem;
+  }
+
+  .wilayah-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1rem 0 0;
+  }
+
+  .peta {
+    order: 2;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .peta svg {
+    width: 100%;
+    max-height: 430px;
+  }
+
+  .popup-budaya {
+    padding: 1rem;
+  }
+
+  .popup-title {
+    font-size: 1.25rem;
+  }
+
+  .popup-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .container-ensiklopedia {
+    margin-top: 4rem;
+  }
+
+  .container-ensiklopedia .judul {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .container-ensiklopedia .wrap-1 {
+    height: auto;
+    min-height: 0;
+    margin: 1.25rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container-ensiklopedia .wrap-1 .display-kategori,
+  .container-ensiklopedia .wrap-1 .wrap-right {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .container-ensiklopedia .wrap-1 .display-kategori {
+    aspect-ratio: 4 / 3;
+  }
+
+  .container-ensiklopedia .wrap-1 .wrap-right {
+    height: 360px;
+  }
+
+  .container-ensiklopedia .wrap-1 .item-kategori span {
+    font-size: 0.78rem;
+  }
+
+  .penjelasan {
+    padding-inline: 1.25rem;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1.25rem 0;
+  }
+
+  .container-galeri {
+    padding: 5rem 1rem;
+  }
+
+  .galeri-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .galeri-card,
+  .galeri-card--wide,
+  .galeri-card--tall {
+    grid-column: span 1;
+    height: 210px;
+  }
+
+  .galeri-card figcaption {
+    opacity: 1;
+    transform: none;
+  }
+
+  .ornamen {
+    scale: 0.72;
+    z-index: 0;
+  }
+
+  .ornamen.barong {
+    top: 4rem;
+    left: -5rem;
+  }
+
+  .ornamen.tari {
+    top: 52rem;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .menu {
+    gap: 0.65rem;
+  }
+
+  .navbar .menu li a {
+    font-size: 0.66rem;
+  }
+
+  .container-hero {
+    min-height: 680px;
+  }
+
+  .container-hero .hero-wrap h1 {
+    font-size: 2.25rem;
+  }
+
+  .container-hero .hero-wrap .text-hero {
+    max-width: 100%;
+  }
+
+  .info-hero {
+    width: calc(100% - 2rem);
+  }
+
+  .container-hero .hero-wrap {
+    justify-content: flex-start;
+    padding-top: 8rem;
+  }
+
+  .container-hero .hero-wrap .text-hero {
+    padding-bottom: 0;
+  }
+
+  .kolom-peta h2 {
+    font-size: 1.4rem;
+  }
+
+  .kolom-peta {
+    min-height: 500px;
+  }
+
+  .wilayah-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .wilayah-button {
+    min-height: 2.75rem;
+    font-size: 0.75rem;
+  }
+
+  .popup-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .container-ensiklopedia .wrap-1 {
+    margin-inline: 0.75rem;
+  }
+
+  .container-ensiklopedia .wrap-1 .wrap-right {
+    height: 320px;
+  }
+
+  .ornamen {
+    scale: 0.58;
+  }
+
+  .galeri-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeri-card,
+  .galeri-card--wide,
+  .galeri-card--tall {
+    height: 250px;
+  }
+}

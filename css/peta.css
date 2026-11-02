@@ -1,0 +1,39 @@
+.peta svg {
+  overflow: visible;
+}
+
+.wilayah-peta {
+  transition: filter .25s ease, opacity .25s ease;
+}
+
+.wilayah-peta.wilayah-aktif {
+  filter:
+    sepia(.45)
+    saturate(1.25)
+    brightness(1.18)
+    drop-shadow(0 0 .45rem rgba(212, 168, 67, .75));
+  opacity: 1;
+}
+
+.peta svg.memiliki-wilayah-aktif .wilayah-peta:not(.wilayah-aktif) {
+  opacity: .72;
+  filter: saturate(.55) brightness(.72);
+}
+
+.map-labels text {
+  display: none;
+  fill: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: rgba(20, 17, 15, .9);
+  stroke-width: 3px;
+  cursor: pointer;
+  transition: fill .2s ease, stroke .2s ease;
+}
+
+.map-labels text.label-aktif {
+  fill: var(--color-gold-twine);
+  stroke: var(--color-primary-dark);
+}

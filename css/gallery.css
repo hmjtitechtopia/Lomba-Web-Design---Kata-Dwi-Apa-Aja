@@ -1,0 +1,125 @@
+.container-galeri {
+    position: relative;
+    width: 100%;
+    padding: 8rem 5vw;
+    overflow: hidden;
+    scroll-margin-top: 2rem;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(201, 177, 109, 0.12), transparent 24rem),
+        radial-gradient(circle at 90% 80%, rgba(201, 177, 109, 0.08), transparent 22rem),
+        var(--color-primary-dark);
+}
+
+.container-galeri::before {
+    content: "";
+    position: absolute;
+    inset: 4rem 5vw auto;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 177, 109, 0.65), transparent);
+}
+
+.galeri-heading {
+    max-width: 680px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+}
+
+.galeri-heading span {
+    color: var(--color-gold);
+    font-family: "Oswald", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.galeri-heading h2 {
+    margin: 0.4rem 0;
+    color: var(--color-primary);
+    font-family: Eagle Lake;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+}
+
+.galeri-heading p {
+    color: rgba(244, 236, 225, 0.72);
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: dense;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.galeri-card {
+    position: relative;
+    grid-column: span 3;
+    height: 260px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(201, 177, 109, 0.25);
+    border-radius: 1rem;
+    background: #17120f;
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: transform 0.65s cubic-bezier(.22, 1, .36, 1), opacity 0.65s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-card--wide {
+    grid-column: span 5;
+}
+
+.galeri-card--tall {
+    grid-column: span 4;
+    height: 330px;
+}
+
+.galeri-card.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.galeri-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(.22, 1, .36, 1), filter 0.5s ease;
+}
+
+.galeri-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 45%, rgba(15, 12, 10, 0.92));
+    pointer-events: none;
+}
+
+.galeri-card figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-family: Eagle Lake;
+    font-size: clamp(0.8rem, 1.5vw, 1.05rem);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.galeri-card:hover {
+    border-color: rgba(201, 177, 109, 0.8);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.38);
+}
+
+.galeri-card:hover img {
+    filter: saturate(1.12) contrast(1.03);
+    transform: scale(1.08);
+}
+
+.galeri-card:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}

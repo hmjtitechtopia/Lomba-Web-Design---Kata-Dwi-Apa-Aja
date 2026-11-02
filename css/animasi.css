@@ -1,0 +1,186 @@
+@keyframes kategori-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes kategori-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    filter: blur(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.kategori-scrolling.kategori-fade-up,
+.display-kategori.kategori-fade-up {
+  animation: kategori-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.kategori-scrolling.kategori-fade-down,
+.display-kategori.kategori-fade-down {
+  animation: kategori-fade-down 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.penjelasan article {
+  animation-duration: 0.55s;
+}
+
+.container-ensiklopedia .display-kategori,
+.container-ensiklopedia .item-kategori {
+  transition: transform 0.35s ease, filter 0.35s ease, opacity 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.container-ensiklopedia .item-kategori:hover {
+  filter: brightness(1.08);
+  transform: translateX(-0.35rem);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.scroll-reveal.is-visible,
+.scroll-reveal.animate__animated {
+  opacity: 1;
+}
+
+.container-peta .peta,
+.container-peta .kolom-peta,
+.container-ensiklopedia .display-kategori,
+.container-ensiklopedia .wrap-right {
+  --animate-duration: 0.95s;
+}
+
+.container-peta .peta { animation-delay: 120ms; }
+.container-peta .kolom-peta { animation-delay: 200ms; }
+.container-ensiklopedia .display-kategori,
+.container-ensiklopedia .judul { animation-delay: 180ms; }
+.container-ensiklopedia .wrap-right { animation-delay: 360ms; }
+
+.btn-explore,
+.btn-detail-budaya,
+.btn-close,
+.popup-close,
+.container-ensiklopedia .arrow,
+.footer-nav a,
+.navbar .menu a {
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-explore:hover,
+.btn-detail-budaya:hover,
+.btn-close:hover,
+.popup-close:hover,
+.container-ensiklopedia .arrow:hover {
+  transform: translateY(-3px);
+}
+
+.btn-explore {
+  box-shadow: 0 0 0 rgba(201, 177, 109, 0);
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    filter 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.btn-explore.animate__animated {
+  animation-fill-mode: none;
+}
+
+.btn-explore:hover {
+  transform: translateY(-5px) scale(1.025);
+  box-shadow:
+    0 0.55rem 1.2rem rgba(201, 177, 109, 0.18),
+    0 0.15rem 0 rgba(20, 17, 15, 0.08);
+  filter: brightness(1.06);
+}
+
+.btn-detail-budaya:hover,
+.btn-close:hover {
+  box-shadow: 0 0.45rem 1rem rgba(201, 177, 109, 0.25);
+  filter: brightness(1.08);
+}
+
+.popup-close:hover {
+  transform: rotate(90deg) scale(1.08);
+  box-shadow: 0 0.35rem 0.9rem rgba(201, 177, 109, 0.2);
+}
+
+.container-ensiklopedia .arrow:hover {
+  color: var(--color-primary-dark);
+  background-color: var(--color-gold-twine);
+  box-shadow: inset 0 -0.25rem 0 rgba(20, 17, 15, 0.18);
+}
+
+.arrow-atas:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.arrow-bawah:hover {
+  transform: translateY(4px) scale(1.03);
+}
+
+.navbar .menu a,
+.footer-nav a {
+  position: relative;
+}
+
+.navbar .menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.4rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold-twine);
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.navbar .menu a:hover {
+  color: var(--color-gold-twine);
+}
+
+.navbar .menu a:hover::after {
+  width: 100%;
+}
+
+.info-hero a {
+  transition: color 0.25s ease, letter-spacing 0.25s ease;
+}
+
+.info-hero a:hover {
+  color: var(--color-gold-twine);
+  letter-spacing: 0.02em;
+}
+
+.btn-explore:focus-visible,
+.btn-detail-budaya:focus-visible,
+.btn-close:focus-visible,
+.popup-close:focus-visible,
+.container-ensiklopedia .arrow:focus-visible,
+.navbar .menu a:focus-visible,
+.footer-nav a:focus-visible {
+  outline: 3px solid rgba(201, 177, 109, 0.55);
+  outline-offset: 4px;
+}

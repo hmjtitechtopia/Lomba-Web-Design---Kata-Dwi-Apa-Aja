@@ -1,0 +1,176 @@
+.ornamen {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.ornamen img {
+    display: block;
+    object-fit: contain;
+    animation: ornamen-mengambang 4.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.barong {
+    transform: rotate(40deg);
+    top: -6rem;
+    left: -8rem;
+}
+
+.wayang {
+    width: 150px;
+    height: 150px;
+}
+
+.w1 {
+    top: 45rem;
+    left: -8rem;
+    transform: rotate(20deg);
+}
+
+.w2 {
+    top: 40rem;
+    left: 77rem;
+    transform: scaleX(-1);
+}
+
+.tari {
+    top: 86rem;
+    width: 150px;
+    height: 150px;
+    left: 30rem;
+    opacity: .2;
+}
+
+.penjor {
+    width: 150px;
+    height: 150px;
+    opacity: .4;
+}
+
+.p1 {
+    top: 130rem;
+    left: -2rem;
+    transform: rotate(20deg);
+}
+
+.p2 {
+    top: 135rem;
+    left: 71rem;
+    transform: scaleX(-1) rotate(20deg);
+}
+
+.barong.muncul-scroll {
+    animation: barong-masuk 1s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.w1.muncul-scroll {
+    animation: wayang-kiri-masuk 1.05s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.w2.muncul-scroll {
+    animation: wayang-kanan-masuk 1.05s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.tari.muncul-scroll {
+    animation: tari-masuk 1.1s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.w1 img {
+    animation-delay: .25s;
+}
+
+.w2 img {
+    animation-name: ornamen-mengambang-kanan;
+    animation-delay: .5s;
+}
+
+.tari img {
+    animation-name: ornamen-mengambang-lambat;
+    animation-delay: .8s;
+}
+
+@keyframes ornamen-mengambang {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(-2deg);
+    }
+    50% {
+        transform: translate3d(0, -14px, 0) rotate(3deg);
+    }
+}
+
+@keyframes ornamen-mengambang-kanan {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(2deg);
+    }
+    50% {
+        transform: translate3d(0, -12px, 0) rotate(-3deg);
+    }
+}
+
+@keyframes ornamen-mengambang-lambat {
+    0%, 100% {
+        transform: translate3d(0, 0, 0) rotate(-1deg) scale(1);
+    }
+    50% {
+        transform: translate3d(0, -18px, 0) rotate(4deg) scale(1.025);
+    }
+}
+
+@keyframes barong-masuk {
+    from {
+        opacity: 0;
+        transform: translate(-90px, -50px) rotate(28deg) scale(.9);
+    }
+    to {
+        opacity: .3;
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes wayang-kiri-masuk {
+    from {
+        opacity: 0;
+        transform: translateX(-110px) rotate(-12deg);
+    }
+    to {
+        opacity: .3;
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes wayang-kanan-masuk {
+    from {
+        opacity: 0;
+        transform: translateX(110px) scaleX(-1);
+    }
+    to {
+        opacity: .3;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes tari-masuk {
+    from {
+        opacity: 0;
+        transform: translateY(90px) scale(.85);
+    }
+    to {
+        opacity: .5;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ornamen {
+        opacity: 1;
+    }
+
+    .ornamen img {
+        animation: none;
+    }
+}
